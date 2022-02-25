@@ -1,0 +1,22 @@
+{
+  "name": "thea",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "serve public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidcraftscode/thea.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sidcraftscode/thea/issues"
+  },
+  "homepage": "https://github.com/sidcraftscode/thea#readme",
+  "dependencies": {
+    "serve": "^13.0.2"
+  }
+}
