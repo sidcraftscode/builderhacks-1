@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script src="https://cdn.tailwindcss.com"></script>
 <div class="md:flex">
 <div class="hidden md:block w-72 bg-gray-100 h-screen">
