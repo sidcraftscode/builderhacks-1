@@ -587,7 +587,6 @@ echo '</div>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
-echo '';
 echo '<div id="calendar" class="hidden target:block fixed top-12 w-full h-full inset-0"><iframe class="h-full w-full" src="calendar.php"></iframe></div>';
 echo '<div id="notes" class="bg-white hidden target:block fixed top-12 w-full h-full inset-0"><iframe class="h-full w-full" src="notes.php"></iframe></div>';
 
