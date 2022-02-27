@@ -368,11 +368,11 @@ echo '<div class="flex items-center md:order-2">';
 echo '<button type="button" class="group relative flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300" id="user-menu-button" aria-expanded="false" type="button" data-dropdown-toggle="dropdown">';
 echo '<span class="sr-only">Open user menu</span>';
 echo '<img class="w-8 h-8 rounded-full hover:ring-4 ring-gray-200 object-cover" src="https://images.unsplash.com/photo-1612896488082-7271dc0ed30c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80" alt="user photo" />';
-echo '<div class="hidden group-hover:block top-6 right-3 border border-gray-50 overflow-hidden shadow-md bg-white ring-0 rounded-xl w-48 absolute">';
+echo '<div class="hidden group-hover:block top-6 right-3 border z-50 border-gray-50 overflow-hidden shadow-md bg-white ring-0 rounded-xl w-48 absolute">';
 echo '<div class="p-3 border-b hover:bg-gray-50">User Details</div>';
 echo '<div class="p-3 border-b hover:bg-gray-50 md:hidden">Dashboard</div>';
-echo '<div class="p-3 border-b hover:bg-gray-50 md:hidden">To-do</div>';
-echo '<div class="p-3 border-b hover:bg-gray-50 md:hidden">Notes</div>';
+echo '<div class="p-3 border-b hover:bg-gray-50 md:hidden"><a href="#todo">To-do</a></div>';
+echo '<div class="p-3 border-b hover:bg-gray-50 md:hidden"><a href="#notes">Notes</a></div>';
 echo '';
 echo '<a href="' . $_SERVER['SCRIPT_NAME'] . '?action=logout" class="p-3 block hover:bg-gray-50">Logout</a>';
 echo '</div>';
@@ -384,15 +384,15 @@ echo '<li>';
 echo '<a href="#" class="block py-2 pr-4 pl-3 rounded text-gray-500 md:p-0" aria-current="page">Dashboard</a>';
 echo '</li>';
 echo '<li>';
-echo '<a href="#" class="block py-2 pr-4 pl-3 rounded text-gray-500 md:p-0" aria-current="page">To-do</a>';
+echo '<a href="#todo" class="block py-2 pr-4 pl-3 rounded text-gray-500 md:p-0" aria-current="page">To-do</a>';
 echo '</li>';
 echo '<li class="relative">';
-echo '<a href="#" class="block py-2 pr-4 pl-3 rounded text-gray-500 md:p-0" aria-current="page">Notes';
+echo '<a href="#notes" class="block py-2 pr-4 pl-3 rounded text-gray-500 md:p-0" aria-current="page">Notes';
 echo '</a>';
 echo '</a>';
 echo '</li>';
 echo '<li class="relative group">';
-echo '<a href="#" class="block py-2 pr-4 pl-3 rounded text-gray-500 md:p-0" aria-current="page">Calendar</a>';
+echo '<a href="#calendar" class="block py-2 pr-4 pl-3 rounded text-gray-500 md:p-0" aria-current="page">Calendar</a>';
 echo '</li>';
 echo '</ul>';
 echo '</div>';
@@ -588,6 +588,9 @@ echo '</div>';
 echo '</div>';
 echo '</div>';
 echo '';
+echo '<div id="calendar" class="hidden target:block fixed top-12 w-full h-full inset-0"><iframe class="h-full w-full" src="calendar.php"></iframe></div>';
+echo '<div id="notes" class="bg-white hidden target:block fixed top-12 w-full h-full inset-0"><iframe class="h-full w-full" src="notes.php"></iframe></div>';
+
     }
 
     /**
@@ -600,6 +603,7 @@ echo '';
         if ($this->feedback) {
             echo '<div class="p-4 bg-sky-100 text-center text-sky-600 font-medium">' . $this->feedback . '</div>';
         }
+        echo '<div class="p-4 bg-sky-100 text-center text-sky-600 font-medium">Don\'t have an account? Sign up <a class="underline" href="?action=register">here</a></div>';
         echo '<section class="bg-gray-100 to-cyan-400">';
         echo '<div class="max-w-screen-lg mx-auto">';
         echo '<div class="px-5 py-12 mx-auto">';
@@ -636,24 +640,43 @@ echo '';
     private function showPageRegistration()
     {
         if ($this->feedback) {
-            echo $this->feedback . "<br/><br/>";
+          echo '<div class="p-4 bg-sky-100 text-center text-sky-600 font-medium">' . $this->feedback . '</div>';
         }
-
-        echo '<h2>Registration</h2>';
-
+        echo '<div class="p-4 bg-sky-100 text-center text-sky-600 font-medium">Already have an account? Log in <a class="underline" href="?action=login">here</a></div>';
+        echo '<section class="bg-gray-100 to-cyan-400">';
+        echo '<div class="max-w-screen-lg mx-auto">';
+        echo '<div class="px-5 py-12 mx-auto">';
+        echo '<h1 class="mx-auto text-center text-3xl mb-4 font-extrabold">Register for an account</h1>';
+        echo '<div class="w-full px-5 py-5 max-w-md mx-auto overflow-hidden bg-white rounded-2xl shadow-xl">';
+        echo '<div class="px-6 py-4">';
+        echo '';
         echo '<form method="post" action="' . $_SERVER['SCRIPT_NAME'] . '?action=register" name="registerform">';
-        echo '<label for="login_input_username">Username (only letters and numbers, 2 to 64 characters)</label>';
-        echo '<input id="login_input_username" type="text" pattern="[a-zA-Z0-9]{2,64}" name="user_name" required />';
-        echo '<label for="login_input_email">User\'s email</label>';
-        echo '<input id="login_input_email" type="email" name="user_email" required />';
-        echo '<label for="login_input_password_new">Password (min. 6 characters)</label>';
-        echo '<input id="login_input_password_new" class="login_input" type="password" name="user_password_new" pattern=".{6,}" required autocomplete="off" />';
-        echo '<label for="login_input_password_repeat">Repeat password</label>';
-        echo '<input id="login_input_password_repeat" class="login_input" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" />';
-        echo '<input type="submit" name="register" value="Register" />';
-        echo '</form>';
-
-        echo '<a href="' . $_SERVER['SCRIPT_NAME'] . '">Homepage</a>';
+        echo '<div class="w-full block mt-4">';
+        echo '<span class="text-gray-700 font-medium text-sm">Username</span>';
+        echo '<input id="login_input_username" type="text" name="user_name" required class="block w-full px-4 py-2 mt-2 text-gray-700 border  placeholder-gray-500 bg-white border-gray-300 rounded-lg focus:border-sky-500 focus:outline-none focus:ring-0" type="text">';
+        echo '</div>';
+        echo '';
+        echo '<label class="w-full block mt-4">';
+        echo '<span class="text-gray-700 font-medium text-sm">Email</span>';
+        echo '<input id="login_input_email" type="email" name="user_email" required class="block w-full px-4 py-2 mt-2 text-gray-700 border  placeholder-gray-500 bg-white border-gray-300 rounded-lg focus:border-sky-500 focus:outline-none focus:ring-0" type="password">';
+        echo '</label>';
+        echo '<label class="w-full block mt-4">';
+        echo '<span class="text-gray-700 font-medium text-sm">Password</span>';
+        echo '<input id="login_input_password_new" type="password" id="login_input_password_new" name="user_password_new" pattern=".{6,}" required autocomplete="off" required class="block w-full px-4 py-2 mt-2 text-gray-700 border  placeholder-gray-500 bg-white border-gray-300 rounded-lg focus:border-sky-500 focus:outline-none focus:ring-0">';
+        echo '</label>';
+        echo '<label class="w-full block mt-4">';
+        echo '<span class="text-gray-700 font-medium text-sm">Repeat Password</span>';
+        echo '<input id="login_input_password_repeat" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" class="block w-full px-4 py-2 mt-2 text-gray-700 border  placeholder-gray-500 bg-white border-gray-300 rounded-lg focus:border-sky-500 focus:outline-none focus:ring-0" type="password">';
+        echo '</label>';
+        echo '';
+        echo '<div class="block mt-8 items-center justify-between">';
+        echo '<button type="submit"  name="register" value="Register"  class="w-full block px-4 font-medium py-3 leading-5 text-white transition-colors duration-200 transform bg-sky-500 rounded-lg hover:bg-sky-600 focus:outline-none">';
+        echo 'Login';
+        echo '</button>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</section>';
     }
 }
 

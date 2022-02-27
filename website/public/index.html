@@ -6,7 +6,7 @@
     <title>Thea</title>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
-<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com?plugins=typography,forms"></script>
     <link rel="stylesheet" href="/assets/css/aos.css">
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
   </head>
@@ -28,68 +28,11 @@
     </label>
     <ul class="menu border-none  flex justify-end list-reset m-0 w-full md:w-auto">
       <li class="border-none">
-        <a href="/pricing.html" class="block font-medium md:inline-block px-4 py-3 text-md no-underline text-gray-500 hover:text-gray-700">Pricing</a>
+        <a href="/contact.html" class="block font-medium md:inline-block px-4 py-3 text-md no-underline text-gray-500 hover:text-gray-700">Contact Us</a>
       </li>
-      <li x-data="{ open: false }" class="items-center border-none">
-        <button href="#" @click="open = !open" class="inline-flex block font-medium px-4 py-3 focus:outline-none text-md no-underline text-gray-500 hover:text-gray-700"><span>Solutions</span><svg class="mt-0.5 h-5 w-5 text-gray-400 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </button>
-        <div x-show="open" @click.away="open = false"
-            x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="md:opacity-0 translate-y-2"
-            x-transition:enter-end="opacity-100 translate-y-0"
-            x-transition:leave="transition ease-in duration-150"
-            x-transition:leave-start="opacity-100 translate-y-0"
-            x-transition:leave-end="opacity-0 translate-y-2"
-        class="translate-x-0 scale-100 bg-white shadow transform transition ease-in-out duration-200 bg-white block md:absolute max-w-sm top-16 inset-x-1/4 rounded-2xl shadow-xl">
-          <ul class="p-4 relative z-100 block">
-            <li class="flex items-center my-2 py-2 px-4 rounded-lg hover:bg-gray-50">
-              <div class="py-auto px-auto">
-                <div class="w-12 h-12 inline-flex items-center justify-center rounded-xl bg-sky-500 text-white flex-shrink-0">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
-                  </svg>
-                </div>
-              </div>
-              <div class="ml-4">
-                <p class="text-gray-900 font-medium">Services</p>
-                <p class="text-gray-700">See all the services and features that Thea has to offer</p>
-              </div>
-            </li>
-
-            <li class="flex items-center my-2 py-2 px-4 rounded-lg hover:bg-gray-50">
-              <div class="py-auto px-auto">
-                <div class="w-12 h-12 inline-flex items-center justify-center rounded-xl bg-sky-500 text-white flex-shrink-0">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                  </svg>
-                </div>
-              </div>
-              <div class="ml-4">
-                <p class="text-gray-900 font-medium">Support</p>
-                <p class="text-gray-700">Get support for any of our products from a real human.</p>
-              </div>
-            </li>
-
-            <li class="flex items-center my-2 py-2 px-4 rounded-lg hover:bg-gray-50">
-              <div class="py-auto px-auto">
-                <div class="w-12 h-12 inline-flex items-center justify-center rounded-xl bg-sky-500 text-white flex-shrink-0">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                </div>
-              </div>
-              <div class="ml-4">
-                <p class="text-gray-900 font-medium">Tutorials</p>
-                <p class="text-gray-700">We give free tutorials so you can learn to use features yourself!</p>
-              </div>
-            </li>
-          </ul>
-        </div>
       </li>
       <li class="border-none">
-        <a href="/about.html" class="block font-medium md:inline-block px-4 py-3 text-md no-underline text-gray-500 hover:text-gray-700">About Us</a>
+        <a href="/about.html" class="block font-medium md:inline-block px-4 py-3 text-md no-underline text-gray-500 hover:text-gray-700">About</a>
       </li>
       <li class="border-none">
         <a href="/blog.html" class="block font-medium md:inline-block px-4 py-3 text-md no-underline text-gray-500 hover:text-gray-700">Blog</a>
@@ -133,18 +76,13 @@
           <div class="flex items-center mb-3">
             <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-sky-500 text-white flex-shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
             </div>
             <h2 class="text-gray-900 text-lg title-font font-medium">Calendar</h2>
           </div>
           <div class="flex-grow">
             <p class="leading-relaxed text-base">Manage your time easily with just a few clicks</p>
-            <a class="mt-3 text-sky-500 inline-flex items-center">Learn More
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
           </div>
         </div>
       </div>
@@ -153,18 +91,13 @@
           <div class="flex items-center mb-3">
             <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-sky-500 text-white flex-shrink-0">
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                <path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
               </svg>
             </div>
             <h2 class="text-gray-900 text-lg title-font font-medium">Notes</h2>
           </div>
           <div class="flex-grow">
             <p class="leading-relaxed text-base">Take down the important stuff.</p>
-            <a class="mt-3 text-sky-500 inline-flex items-center">Learn More
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
           </div>
         </div>
       </div>
@@ -173,18 +106,13 @@
           <div class="flex items-center mb-3">
             <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-sky-500 text-white flex-shrink-0">
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                <path d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
               </svg>
             </div>
             <h2 class="text-gray-900 text-lg title-font font-medium">To-do</h2>
           </div>
           <div class="flex-grow">
             <p class="leading-relaxed text-base">Manage your tasks easily</p>
-            <a class="mt-3 text-sky-500 inline-flex items-center">Learn More
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
           </div>
         </div>
       </div>
@@ -194,25 +122,25 @@
 <section class="max-w-screen-lg mx-auto text-gray-600 body-font">
   <div class="container mx-auto flex px-5 py-12 md:flex-row flex-col items-center">
     <div class="lg:flex-grow md:w-1/2 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-extrabold text-gray-900">Easy user management
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-extrabold text-gray-900">Easy to use
       </h1>
-      <p class="mb-8 leading-relaxed">With Thea you can assign a role to parts of your team. Easy and simple</p>
+      <p class="mb-8 leading-relaxed">We have a simple and intuitive design</p>
       <p class="mb-8 font-medium text-sky-500 leading-relaxed">Learn more &rarr;</p>
     </div>
     <div class="lg:max-w-lg md:w-1/2 w-5/6">
-      <img data-aos="flip-left" class="object-cover object-center rounded-full border-4 border-sky-500" alt="hero" src="/assets/images/assign.png">
+      <img data-aos="flip-left" class="object-cover object-center rounded-full border-4 border-sky-500" alt="hero" src="/assets/images/notes.png">
     </div>
   </div>
 </section>
 <section class="max-w-screen-lg mx-auto text-gray-600 body-font">
   <div class="container mx-auto flex px-5 py-12 md:flex-row flex-col items-center">
     <div class="md:w-1/3 w-5/6 mb-10 md:mb-0">
-      <img data-aos="zoom-out-up" class="object-cover object-center rounded" alt="hero" src="/assets/images/heromobile.svg">
+      <img data-aos="zoom-out-up" class="object-cover object-center rounded" alt="hero" src="/assets/images/heromobile.png">
     </div>
     <div class="md:w-2/3 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-extrabold text-gray-900">Available anywhere
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-extrabold text-gray-900">Manage your student life, from practically anywhere.
       </h1>
-      <p class="mb-8 leading-relaxed">With our new mobile app, you can use Thea on the train, on the way to work. Practically <span class="font-medium">anywhere</span></p>
+      <p class="mb-8 leading-relaxed">Our site has always been mobile responsive, but we are pleased to announce that we also have a mobile app.</p>
       <p class="mb-8 font-medium text-sky-500 leading-relaxed">Learn more &rarr;</p>
     </div>
   </div>
@@ -220,13 +148,13 @@
 <section class="max-w-screen-lg mx-auto text-gray-600 body-font">
   <div class="container mx-auto flex px-5 py-12 md:flex-row flex-col items-center">
     <div class="lg:flex-grow md:w-1/2 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-extrabold text-gray-900">Customizable, extendable
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-extrabold text-gray-900">Customizable features
       </h1>
-      <p class="mb-8 leading-relaxed">Give your dashboard a look that you like</p>
+      <p class="mb-8 leading-relaxed">Choose a layout that works for you</p>
       <p class="mb-8 font-medium text-sky-500 leading-relaxed">Learn more &rarr;</p>
     </div>
     <div class="lg:max-w-lg md:w-1/2 w-5/6">
-      <img data-aos="fade-right" class="object-cover object-center border-sky-500" alt="hero" src="/assets/images/example3.svg">
+      <img data-aos="fade-right" class="object-cover object-center border-sky-500 border-4 rounded-3xl" alt="hero" src="/assets/images/tasks.png">
     </div>
   </div>
 </section>
@@ -242,10 +170,10 @@
           </svg>
           <p class="leading-relaxed text-sky-50 font-medium mb-6">Thea is simply the best tool available in the market today. With Thea I was able to manage a large team of developers.</p>
           <a class="inline-flex items-center">
-            <img alt="testimonial" src="/assets/images/avatar2.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+            <img alt="testimonial" src="/assets/images/qmap.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
             <span class="flex-grow flex flex-col pl-4">
-              <span class="title-font font-medium text-white">Juliet Capulet</span>
-              <span class="text-sky-100 text-sm">CEO, ACME inc.</span>
+              <span class="title-font font-medium text-white">Arnav Sharma</span>
+              <span class="text-sky-100 text-sm">Student</span>
             </span>
           </a>
         </div>
@@ -257,10 +185,10 @@
           </svg>
           <p class="leading-relaxed mb-6">We outsourced management to Thea and we boosted our revenue by 110%. Would definitely recommend it to any startup that wants to grow!</p>
           <a class="inline-flex items-center">
-            <img alt="testimonial" src="/assets/images/avatar1.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+            <img alt="testimonial" src="/assets/images/charles.png" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
             <span class="flex-grow flex flex-col pl-4">
-              <span class="title-font font-medium text-gray-900">Romeo Montague</span>
-              <span class="text-gray-500 text-sm">Lead Developer, Easy UI</span>
+              <span class="title-font font-medium text-gray-900">Charles</span>
+              <span class="text-gray-500 text-sm">High school student</span>
             </span>
           </a>
         </div>
@@ -274,16 +202,16 @@
       <p class="lg:w-2/3 mx-auto text-gray-900 font-extrabold leading-relaxed sm:text-3xl text-2xl">Trusted by these amazing companies</p>
     </div>
     <div class="grid md:grid-cols-4 grid-cols-2 gap-2 items-center">
-      <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-50 rounded-lg py-8 px-4">
-      <img class="mx-auto h-6" src="/assets/images/acme.svg">
-      </div>
-      <div data-aos="fade-up" class="bg-gray-50 py-8 rounded-lg px-4">
-      <img class="mx-auto h-6" src="/assets/images/globex.svg">
-      </div>
-      <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-50 py-8 rounded-lg px-4">
+      <div data-aos="fade-up" data-aos-delay="200" class="invisible bg-gray-50 py-8 rounded-lg px-4">
       <img class="mx-auto h-6" src="/assets/images/singletechno.svg">
       </div>
-      <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-50 py-8 rounded-lg px-4">
+      <div data-aos="fade-up" data-aos-delay="100" class="bg-gray-50 rounded-lg py-11 px-4">
+        <img class="mx-auto h-6" src="/assets/images/stemblog.svg">
+        </div>
+        <div data-aos="fade-up" class="bg-gray-50 py-8 rounded-lg px-4">
+        <img class="mx-auto h-12" src="/assets/images/ui.svg">
+        </div>
+      <div data-aos="fade-up" data-aos-delay="300" class="invisible bg-gray-50 py-8 rounded-lg px-4">
       <img class="mx-auto h-6" src="/assets/images/indiestry.svg">
       </div>
     </div>
@@ -306,78 +234,6 @@
 </section>
 <footer>
 <div class="text-gray-600 max-w-screen-lg mx-auto body-font">
-  <div class="px-5 py-24 border-t bg-clip-padding mx-auto">
-    <div class="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
-      <div class="md:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">FAMILY</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">ACME</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Single Techno</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Globex</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Indiestry</a>
-          </li>
-        </nav>
-      </div>
-      <div class="md:w-1/4 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">PRODUCTS</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">VSCode Pro</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Atom UX</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Vim Ultimate</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Tasks</a>
-          </li>
-        </nav>
-      </div>
-      <div class="md:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">FAMILY</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">ACME</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Single Techno</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Globex</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Indiestry</a>
-          </li>
-        </nav>
-      </div>
-      <div class="md:w-1/4 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">PRODUCTS</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">VSCode Pro</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Atom UX</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Vim Ultimate</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Tasks</a>
-          </li>
-        </nav>
-      </div>
-    </div>
-  </div>
   <div class="text-gray-600 body-font">
   <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-extrabold items-center md:justify-start justify-center text-gray-900">
@@ -386,26 +242,20 @@
     <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2020 Thea - All rights reserved
     </p>
     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-      <a class="text-gray-500">
+      <a href="https://facebook.com/" class="text-gray-500">
         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
           <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
         </svg>
       </a>
-      <a class="ml-3 text-gray-500">
+      <a href="https://twitter.com/TheaEducation" class="ml-3 text-gray-500">
         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
           <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
         </svg>
       </a>
-      <a class="ml-3 text-gray-500">
+      <a href="https://instagram.com/" class="ml-3 text-gray-500">
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
           <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
           <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-        </svg>
-      </a>
-      <a class="ml-3 text-gray-500">
-        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-          <circle cx="4" cy="4" r="2" stroke="none"></circle>
         </svg>
       </a>
     </span>
