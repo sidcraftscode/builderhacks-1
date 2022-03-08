@@ -4,7 +4,7 @@ Welcome to Thea! Here is a short post on who, what, where, when, and why Thea ca
 
 # Who?
 
-Thea was co-founded by Edward Calzia and Siddharth Chaudhary. We hope to expand and try and get more people working at Thea! If you would like to join our team, make sure to email us at.
+Thea was co-founded by Edward Calzia, Siddharth Chaudhary and Aarav Kushagra. We hope to expand and try and get more people working at Thea! If you would like to join our team, make sure to email us at.
 
 # What?
 
